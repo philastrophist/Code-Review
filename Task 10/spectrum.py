@@ -20,7 +20,10 @@ class Spectrum(object):
         data = hdus[1].data
         flux_density_wavelength = data['flux'] * 1e-17 * u.erg/u.s/u.cm/u.cm/u.Angstrom
         wavelengths = (10**data['loglam']) * u.Angstrom
-        return Spectrum(wavelengths, flux_density_wavelength)
+        
+        # Make a Spectrum object and return it!
+
+        raise NotImplementedError("You need to return a `Spectrum` object here!")
 
 
     def __repr__(self):
